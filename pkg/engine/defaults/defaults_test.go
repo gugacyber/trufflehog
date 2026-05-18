@@ -120,7 +120,6 @@ var excludedFromDefaultList = map[detector_typepb.DetectorType]struct{}{
 	detector_typepb.DetectorType_DatadogApikey: {},
 	detector_typepb.DetectorType_Guru:          {},
 	detector_typepb.DetectorType_IPInfo:        {},
-	detector_typepb.DetectorType_Lob:           {},
 	detector_typepb.DetectorType_Rev:           {},
 	detector_typepb.DetectorType_TLy:           {},
 	detector_typepb.DetectorType_Tru:           {},
