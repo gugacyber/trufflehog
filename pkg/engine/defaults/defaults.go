@@ -56,6 +56,9 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/atera"
 	atlassianv1 "github.com/trufflesecurity/trufflehog/v3/pkg/detectors/atlassian/v1"
 	atlassianv2 "github.com/trufflesecurity/trufflehog/v3/pkg/detectors/atlassian/v2"
+	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/atlassiandatacenter/bitbucketdatacenter"
+	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/atlassiandatacenter/confluencedatacenter"
+	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/atlassiandatacenter/jiradatacenterpat"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/audd"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/auth0managementapitoken"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/auth0oauth"
@@ -96,7 +99,6 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/billomat"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/bingsubscriptionkey"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/bitbar"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/atlassiandatacenter/bitbucketdatacenter"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/bitbucketapppassword"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/bitcoinaverage"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/bitfinex"
@@ -188,7 +190,6 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/commercejs"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/commodities"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/companyhub"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/atlassiandatacenter/confluencedatacenter"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/confluent"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/contentfulpersonalaccesstoken"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/conversiontools"
@@ -215,6 +216,7 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/dareboost"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/databox"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/databrickstoken"
+	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/datadogapikey"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/datadogtoken"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/datagov"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/deepai"
@@ -402,7 +404,6 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/ipquality"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/ipstack"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/jdbc"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/atlassiandatacenter/jiradatacenterpat"
 	jiratokenv1 "github.com/trufflesecurity/trufflehog/v3/pkg/detectors/jiratoken/v1"
 	jiratokenv2 "github.com/trufflesecurity/trufflehog/v3/pkg/detectors/jiratoken/v2"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/jotform"
@@ -1094,6 +1095,7 @@ func buildDetectorList() []detectors.Detector {
 		&dareboost.Scanner{},
 		&databox.Scanner{},
 		&databrickstoken.Scanner{},
+		&datadogapikey.Scanner{},
 		&datadogtoken.Scanner{},
 		&datagov.Scanner{},
 		// &debounce.Scanner{},
