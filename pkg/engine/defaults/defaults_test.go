@@ -111,6 +111,7 @@ func TestAllDetectorTypesAreInDefaultList(t *testing.T) {
 //
 // TODO: audit this list periodically — entries in the "mistakenly missed" group
 // should be removed once the corresponding detector is added to defaults.go.
+//
 //nolint:staticcheck // SA1019: intentionally references deprecated DetectorType values to keep them excluded.
 var excludedFromDefaultList = map[detector_typepb.DetectorType]struct{}{
 	// TODO: these detectors have implementations but were mistakenly never added
@@ -119,7 +120,6 @@ var excludedFromDefaultList = map[detector_typepb.DetectorType]struct{}{
 	// Remove each entry once its detector has been carefully added.
 	detector_typepb.DetectorType_DatadogApikey: {},
 	detector_typepb.DetectorType_Guru:          {},
-	detector_typepb.DetectorType_IPInfo:        {},
 	detector_typepb.DetectorType_Lob:           {},
 	detector_typepb.DetectorType_Rev:           {},
 	detector_typepb.DetectorType_TLy:           {},
